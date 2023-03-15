@@ -1,14 +1,20 @@
 <script>
+import ProjectCard from "./ProjectCard.vue";
+
 export default {
-  name: "PostList",
+  name: "ProjectsList",
+  components: { ProjectCard, ProjectCard, ProjectCard },
   props: { projects: Array },
 };
 </script>
 
 <template>
-  <ul>
-    <li v-for="project in projects" :key="project.id">
-      {{ project.title }}
-    </li>
-  </ul>
+  <div>
+    <ProjectCard
+      v-for="project in projects"
+      :key="project.id"
+      :project="project"
+    >
+    </ProjectCard>
+  </div>
 </template>

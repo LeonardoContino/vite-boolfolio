@@ -1,4 +1,5 @@
 <script>
+import axios from "axios";
 import Appheader from "./components/AppHeader.vue";
 import AppProjects from "./components/Projects/AppProjects.vue";
 
