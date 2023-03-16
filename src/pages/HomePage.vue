@@ -23,7 +23,5 @@ export default {
 };
 </script>
 <template>
-  <main class="container">
-    <AppProjects :projects="projects"></AppProjects>
-  </main>
+  <AppProjects :projects="projects"></AppProjects>
 </template>
