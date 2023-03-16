@@ -20,6 +20,15 @@ export default {
       <div>
         {{ project.updated_at }}
       </div>
+      <div v-if="project.technologies?.length">
+        <span
+          v-for="tech in project.technologies"
+          :key="tech.id"
+          class="badge me-2"
+          :style="{ backgroundColor: tech.color }"
+          >{{ tech.label }}</span
+        >
+      </div>
       <RouterLink
         v-if="!isDetail"
         class="btn btn-primary"
