@@ -13,8 +13,15 @@ export default {
     <div class="card-body">
       {{ project.content }}
     </div>
-    <div class="card-footer">
-      {{ project.updated_at }}
+    <div class="card-footer d-flex align-items-center justify-content-between">
+      <div>
+        {{ project.updated_at }}
+      </div>
+      <RouterLink
+        class="btn btn-primary"
+        :to="{ name: 'project-detail', params: { slug: project.slug } }"
+        >Vedi</RouterLink
+      >
     </div>
   </div>
 </template>
