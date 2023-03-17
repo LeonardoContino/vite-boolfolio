@@ -30,5 +30,5 @@ export default {
 </script>
 
 <template>
-  <ProjectCard :isDetail="true" :project="project"></ProjectCard>
+  <ProjectCard v-if="project" :isDetail="true" :project="project"></ProjectCard>
 </template>
