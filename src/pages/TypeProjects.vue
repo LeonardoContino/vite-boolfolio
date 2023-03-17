@@ -19,7 +19,8 @@ export default {
       axios
         .get(endpoint)
         .then((res) => {
-          this.projects = res.data;
+          this.projects = res.data.projects;
+          this.type = res.data.type;
         })
         .catch(() => {
           this.hasError = true;
